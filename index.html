@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript" charset="utf-8" src="jsx2jquery.js"></script>
+<script>
+function onClickConvert() {
+	var sourceTextarea = document.getElementById("source");
+	var resultTextarea = document.getElementById("result");
+	
+	resultTextarea.value = jsx2jquery(sourceTextarea.value);
+}
+</script>
+<link rel="stylesheet" charset="utf-8" type="text/css" href="style.css" />
+</head>
+<body>
+
+<textarea id="source" class="content">function sample(){
+  return (
+    <View>
+      <span>first content</span>
+      <span>second content</span>
+    </View>
+  );
+}</textarea>
+
+<textarea id="result" class="content"></textarea>
+
+<br />
+<button onclick="onClickConvert()">Convert</button>
+</body>
+</html>
